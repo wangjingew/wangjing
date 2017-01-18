@@ -96,6 +96,10 @@
 				shake();
 			}
 		}
+		document.onclick = function(){
+			audioGot.play();
+			audioScan.play();
+		};
 
 		function shake(){
 			// clearTimeout(timer);
@@ -111,10 +115,8 @@
 				setTimeout(function(){
 					bReady = true;
 				},500)
-				audioScan.play();
 				
 			},2000)
-			audioGot.play();
 		}
 	</script>
 </body>

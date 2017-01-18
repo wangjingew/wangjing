@@ -94,6 +94,8 @@
 
 			if( x - lastX > 20 && bReady ){
 				shake();
+				audioScan.play();
+				audioGot.play();
 			}
 		}
 
@@ -112,8 +114,9 @@
 					bReady = true;
 				},500)
 				audioScan.play();
-				audioGot.play();
+				
 			},2000)
+			audioGot.play();
 		}
 	</script>
 </body>

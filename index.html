@@ -89,17 +89,19 @@
 
 		var lastX = 0;
 		var bReady = true;
-
+		
+		window.onclick = function(){
+			audioGot.play();
+			audioScan.play();
+		};
+		
 		window.ondevicemotion = function({accelerationIncludingGravity:{x}}){
 
 			if( x - lastX > 20 && bReady ){
 				shake();
 			}
 		}
-		window.onclick = function(){
-			audioGot.play();
-			audioScan.play();
-		};
+		
 
 		function shake(){
 			// clearTimeout(timer);
@@ -117,6 +119,7 @@
 				},500)
 				
 			},2000)
+			
 		}
 	</script>
 </body>

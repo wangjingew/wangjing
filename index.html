@@ -1,0 +1,139 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>第五空间</title>
+
+    <!-- 移动设备支持 -->
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/yzslide.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container">
+    <div class="musicC on">
+        <div class="mask"></div>
+        <div class="musicButton"></div>
+    </div>
+    <audio id="myAudio" loop="" autoplay="">
+        <source src="music/Moonlight.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 与元素。
+    </audio>
+
+    <div class="page_bg animated fadeIn">
+        <img src="images/p1_bg.jpg" style="width: 100%; height: 100%">
+    </div>
+
+    <div class="page" style="top: 0;left: 0;">
+        <div id="page_1_bg" class="page_bg"><img src="images/p1_bg.jpg"></div>
+        <div class="page_top"><img src="images/img2.png"></div>
+
+        <div id="page_1_desc_0" class="animated fadeInUp page_desc" style="display: none;"><img src="images/p1_tex1.png"></div>
+        <div id="page_1_desc_1" class="animated bounceInDown page_desc" style="display: none;"><img src="images/p1-tex2.png"></div>
+        <div id="page_1_desc_2" class="animated bounceInRight" style="display: none;"><img src="images/p1-tex3.png"></div>
+        <div id="page_1_arrow" class="animated fadeInUp slide_arrow">
+            <img src="images/p3.5.6_up.png">
+        </div>
+        <canvas id="page_1_canvas" width="400" height="400" style="border-radius: 315.5px;"></canvas>
+    </div>
+    <div class="page" style="top: 0;left: 0;">
+        <div id="page_2_bg" class="page_bg animated flip"><img src="images/p2_bg.jpg"></div>
+        <div class="animated fadeInUp slide_arrow">
+            <img src="images/p3.5.6_up.png">
+        </div>
+        <div id="page_2_text_0" class="" style="display: none;"><img src="images/p2-text1.png"></div>
+        <div id="page_2_text_1" class="zoomIn" style="display: none;"><img src="images/p2-text2.png"></div>
+        <div class="page_top"><img src="images/img2.png"></div>
+        <div class="page_brief">
+
+        </div>
+    </div>
+    <div class="page" style="top: 0; left: 0;">
+        <div id="page_3_bg" class="page_bg animated fadeInRight"><img src="images/p3_bg.jpg" /></div>
+        <div class="animated fadeInUp slide_arrow">
+            <img src="images/p3.5.6_up.png">
+        </div>
+        <div id="page_3_text" class="animated rotateIn page_desc" style="display: none;">
+            <img src="images/p3-text.png">
+        </div>
+        <div class="page_top"><img src="images/img2.png"></div>
+        <div class="page_brief">
+
+        </div>
+    </div>
+    <div class="page" style="top: 0;">
+        <div id="page_4_bg" class="page_bg animated fadeIn"><img src="images/p4_bg.jpg" /></div>
+        <div class="animated fadeInUp slide_arrow">
+            <img src="images/p3.5.6_up.png">
+        </div>
+        <div id="page_4_text" class="animated zoomIn page_desc" style="">
+            <img src="images/p4-text2.png">
+        </div>
+        <div class="page_brief">
+            <img src="images/img4.png">
+        </div>
+    </div>
+    <div class="page" style="display: none; top: 5120px;">
+        <div id="page_5_bg" class="page_bg animated bounce"><img src="images/p5_bg.jpg" /></div>
+        <div class="animated fadeInUp slide_arrow">
+            <img src="images/p3.5.6_up.png">
+        </div>
+        <div id="page_5_text_0" class="bounce page_desc" style="display: none"><img src="images/p5-text1.png"></div>
+        <div id="page_5_text_1" class="" style="display: none"><img src="images/p5-text2.png"></div>
+
+        <div class="page_brief">
+            <img src="images/img4.png">
+        </div>
+    </div>
+    <div class="page" style="display: none; top: 6400px;">
+        <div id="page_6_bg" class="page_bg animated fadeInLeftBig"><img src="images/p6_bg.jpg" /></div>
+        <div class="animated fadeInUp slide_arrow">
+            <img src="images/p3.5.6_up.png">
+        </div>
+        <div id="page_6_text_0" class="" style="display: none"><img src="images/p6-text1.png"></div>
+        <div id="page_6_text_1" class="swing" style="display: none"><img src="images/p6-text2.png"></div>
+        <div id="page_6_text_2" style="display: none"><img src="images/p6-text3.png"></div>
+        <div class="page_brief">
+            <img src="images/img4.png">
+        </div>
+    </div>
+    <div class="page" style="display: none; top: 7680px;">
+        <div id="page_7_bg" class="page_bg animated pulse"><img src="images/p7_bg.jpg" /></div>
+        <div class="animated fadeInUp slide_arrow">
+            <img src="images/p3.5.6_up.png">
+        </div>
+        <div id="page_7_text" class="animated fadeInRight page_desc" style="display: none">
+            <img src="images/p7-text.png">
+        </div>
+        <div class="page_brief">
+            <img src="images/img4.png">
+        </div>
+    </div>
+    <div class="page" style="display: none; top: 8960px;">
+        <div id="page_8_bg" class="page_bg animated fadeIn"><img src="images/p8_bg.jpg" /></div>
+
+        <div id="page_8_text" class="animated flash page_desc" style="display: none">
+            <img src="images/p8-text1.png">
+        </div>
+        <div class="page_brief">
+            <img src="images/img4.png">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/preloadjs-0.4.1.min.js"></script>
+<script src="js/yzslide.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+        <title>联系我们</title>
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/yzslide.css">
+        <!--<link rel="stylesheet" href="css/index.css">-->
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script>
+            var DEFAULT_BG_IMG_WIDTH = 720;
+            var DEFAULT_BG_IMG_HEIGHT = 1136;
+            $(function(){
+                //调整背景图
+                adjustBgImg();
+                $(".phone").addClass("animated tada");
+            })
+            /*
+             调整背景图
+             */
+            function adjustBgImg(){
+                $(".container").each(function(){
+                    $(this).css("width", $(window).width() + "px");
+                    if ($(window).width() / $(window).height() > DEFAULT_BG_IMG_WIDTH / DEFAULT_BG_IMG_HEIGHT){
+                        $(this).css("height", $(window).width() * DEFAULT_BG_IMG_HEIGHT / DEFAULT_BG_IMG_WIDTH);
+                    }
+                    else{
+                        $(this).css("height", $(window).height() + "px");
+                    }
+                });
+            }
+            /*
+             * 根据宽度固定图片的宽高比
+             * */
+            function autoAdjustImgByWidth(e,width,height){
+
+                var obj_width =$(e).width();
+
+                $(e).height(obj_width*height/width);
+            }
+
+            function adjustImgMapArea(imgId){
+                $($("#" + imgId).attr("usemap") + " area").each(function(){
+                    var coords = $(this).attr("coords").split(',');
+                    var leftFlag = true;
+                    for(var i = 0; i < coords.length; ++i){
+                        if (leftFlag){
+                            coords[i] = $.trim(coords[i]) * $("#" + imgId).width() / DEFAULT_BG_IMG_WIDTH;
+                        }
+                        else{
+                            coords[i] = $.trim(coords[i]) * $("#" + imgId).height() / DEFAULT_BG_IMG_HEIGHT;
+                        }
+                        leftFlag = !leftFlag;
+                    }
+
+                    var coordsStr = "";
+                    for(var i = 0; i < coords.length; ++i){
+                        coordsStr = coordsStr + coords[i] + ",";
+                    }
+                    coordsStr = coordsStr.substr(0, coordsStr.length - 1);
+                    $(this).attr("coords", coordsStr);
+                });
+            }
+
+        </script>
+        <style>
+            .container{
+
+                /*background-repeat: no-repeat;*/
+                background-image: url("images/online-kefu.jpg");
+                background-size:100% 100%;
+                display: block;
+                width: 100%;
+                height:100%;
+                position: relative;
+                margin: 0 auto;
+                padding:0 0;
+            }
+            .phone{
+                background-image: url(images/phone.png);
+                position: absolute;
+                background-size: 100% 100%;
+                left:19.44%;
+                top:15.93%;
+                width: 54.03%;
+                height:6.5%;
+            }
+            body{
+                padding:0 0 ;
+                margin: 0 0 ;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+           <a href="tel:400-885-2312"><div class="phone"></div></a>
+        </div>
+
+    </body>
+</html>
+
